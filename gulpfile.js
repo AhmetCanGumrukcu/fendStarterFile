@@ -23,15 +23,15 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('./js/'));
 });
 
-gulp.task('views', function buildHTML() {
-    return gulp.src('views/*.pug')
-    .pipe(pug())
-    .pipe(gulp.dest("./"))
-  });
+// gulp.task('views', function buildHTML() {
+//     return gulp.src('views/*.pug')
+//     .pipe(pug())
+//     .pipe(gulp.dest("./"))
+//   });
 
 gulp.task('watch', function () {
     gulp.watch('./sass/*.scss', ['sass']);
-    gulp.watch('./views/*.pug', ['views']);
+    //gulp.watch('./views/*.pug', ['views']);
 });
 
 gulp.task('default', ["watch", "scripts","views"]);
